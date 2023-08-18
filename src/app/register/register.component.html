@@ -1,0 +1,56 @@
+
+  <div class="register-card">
+  
+  
+  <mat-card>
+      <mat-card-header>
+          <h2>Registeration</h2>
+      </mat-card-header>
+      <mat-card-content >
+          <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregister()">
+              <mat-form-field class="example-full-width">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="id" >
+               
+              </mat-form-field>
+              
+            <div     class="text-danger"  *ngIf="f.id.invalid  && (f.id.touched ||  f.id.dirty || submitted)">
+              <div *ngIf="f.id.hasError('required')">username is required.</div>
+            </div>
+           
+              <mat-form-field class="example-full-width">
+                  <mat-label>Name</mat-label>
+                  <input matInput formControlName="name" >
+                </mat-form-field>
+                <div     class="text-danger"  *ngIf="f.name.invalid  && (f.name.touched ||  f.name.dirty || submitted)">
+                  <div *ngIf="f.name.hasError('required')">name is required.</div>
+                </div>
+               
+                <mat-form-field class="example-full-width">
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput formControlName="password" >
+                </mat-form-field>
+                <div     class="text-danger"  *ngIf="f.password.invalid  && (f.password.touched ||  f.password.dirty || submitted)">
+                  <div *ngIf="f.password.hasError('required')">password is required.</div>
+                  <div *ngIf="f.password.hasError('pattern')">password should contain one capital and small and numeric and special Character</div>
+                </div>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="email" >
+                </mat-form-field>
+                <div     class="text-danger"  *ngIf="f.email.invalid  && (f.email.touched ||  f.email.dirty || submitted)">
+                  <div *ngIf="f.email.hasError('required')">email is required.</div>
+                  <div *ngIf="f.email.hasError('email')">email should end with @gmail.com</div>
+                </div>
+                <mat-radio-group  formControlName="gender" aria-label="Select an option">
+                  <mat-radio-button class="mx-2 my-4" value="male">Male</mat-radio-button>
+                  <mat-radio-button class="mx-2 my-4" value="female">Female</mat-radio-button>
+                </mat-radio-group>
+                <div class="d-flex justify-content-between">
+                  <button mat-raised-button color="primary">Submit</button>
+                  <a routerLink="/login" mat-raised-button color="accent">Back to Login</a>
+                </div>
+            </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

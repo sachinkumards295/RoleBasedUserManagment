@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": "admin",
+      "name": "Admin User",
+      "password": "Sa9620503458@",
+      "email": "admin@in.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "Test 1",
+      "name": "Admin User",
+      "password": "Sa9620503458@",
+      "email": "admin@in.com",
+      "gender": "male",
+      "role": "item.name",
+      "isactive": true
+    },
+    {
+      "id": "Test 2",
+      "name": "Admin User",
+      "password": "Sa9620503458@",
+      "email": "admin@in.com",
+      "gender": "male",
+      "role": "item.code",
+      "isactive": true
+    },
+    {
+      "id": "test 5",
+      "name": "sachin",
+      "password": "Sa7022134210@",
+      "email": "sac@gmail.com",
+      "gender": "male",
+      "role": "item.name",
+      "isactive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "tech",
+      "name": "Technician"
+    }
+  ]
+}

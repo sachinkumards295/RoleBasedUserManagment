@@ -1,0 +1,15 @@
+.mat-card>:last-child:not(.mat-card-footer), .mat-card-content>:last-child:not(.mat-card-footer) {
+    flex-direction: column;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.mat-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login-card{
+    margin:100px 100px;
+}

@@ -1,0 +1,31 @@
+<div class="register-card">
+<mat-card>
+    <mat-card-header>
+        <h2>Update Details</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerform" (ngSubmit)="updateUser()">
+            <mat-form-field class="example-full-width">
+                <mat-label>Role</mat-label>
+                <mat-select formControlName="role">
+                 <mat-option value="">Select Role</mat-option>
+                 <mat-option *ngFor="let item of roleList" value="item.name">
+                     {{item.name}}
+                 </mat-option>
+                </mat-select>
+                
+            </mat-form-field>
+            <div>
+                <mat-checkbox formControlName="isactive" class="example-margin">Is Active</mat-checkbox>
+            </div>
+      
+
+              <div class="d-flex justify-content-around">
+                <button mat-raised-button color="primary">save</button>
+                <a mat-raised-button color="accent" (click)="close()">Close</a>
+              </div>
+          </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
